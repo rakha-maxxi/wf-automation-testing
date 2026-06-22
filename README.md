@@ -104,11 +104,29 @@ wf-testing/
 │   ├── verify-mark-all-read-button.yaml
 │   └── tap-mark-all-read.yaml
 │
-└── monitoring/                     # 📊 Monitoring Module (4 tests)
-    ├── verify-monitoring-tab-visible-supervisor.yaml
-    ├── verify-monitoring-page-header.yaml
-    ├── verify-supervisor-overview-stats.yaml
-    └── verify-monitoring-hidden-for-worker.yaml
+└── monitoring/                     # 📊 Monitoring Module (16 tests)
+    ├── verify-monitoring-view.yaml
+    ├── approve-task.yaml
+    ├── reject-task.yaml
+    ├── see-response-by-question.yaml
+    ├── see-response-by-individual.yaml
+    │
+    │   # Status Filter
+    ├── set-not-started-filter-monitoring.yaml
+    ├── set-need-approval-filter-monitoring.yaml
+    ├── set-partially-complete-filter-monitoring.yaml
+    │
+    │   # Priority Filter
+    ├── set-priority-urgent-task-filter-monitoring.yaml
+    ├── set-priority-normal-task-filter-monitoring.yaml
+    ├── set-priority-low-task-filter-monitoring.yaml
+    │
+    │   # Due Date Filter
+    ├── set-due-date-today-filter-monitoring.yaml
+    ├── set-due-date-yesterday-filter-monitoring.yaml
+    ├── set-due-date-this-week-filter-monitoring.yaml
+    ├── set-due-date-this-month-filter-monitoring.yaml
+    └── set-due-date-custom-range-filter-monitoring.yaml
 ```
 
 ---
@@ -122,8 +140,8 @@ wf-testing/
 | **My Task** | 28 | Tabs, Task list, Status/Priority/Due Date filters, Search |
 | **Profile** | 13 | View, Edit, Change password, Navigation, UI elements |
 | **Notification** | 6 | Tabs, Mark as read, Empty states |
-| **Monitoring** | 4 | Supervisor RBAC, Stats, Page elements |
-| **Total** | **71** | |
+| **Monitoring** | 16 | Supervisor RBAC, Status/Priority/Due Date filters, Task actions |
+| **Total** | **83** | |
 
 ---
 
