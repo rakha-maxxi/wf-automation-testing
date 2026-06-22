@@ -1,0 +1,13 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-07: Verify Search Functionality
+# Verify search filters tasks by keyword
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Search..."
+- inputText: "Compliance"
+- assertVisible: "Compliance"

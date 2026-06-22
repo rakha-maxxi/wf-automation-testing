@@ -1,0 +1,12 @@
+appId: com.sindika.workfusion
+---
+# TC-NOTIF-03: Switch to Unread Tab
+# Verify switching to the Unread notifications tab
+
+- launchApp:
+    clearState: false
+
+- tapOn: "Notifications"
+
+- tapOn: Unread
+- assertVisible: Unread

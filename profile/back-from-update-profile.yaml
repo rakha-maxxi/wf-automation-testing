@@ -1,0 +1,21 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-08: Back from Update Profile Page
+# Verify navigating back from update profile page
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- tapOn:
+    id: "btn-edit-profile"
+
+- assertVisible: Update Profile
+
+- tapOn:
+    id: "btn-back"
+
+- assertVisible: "Account"

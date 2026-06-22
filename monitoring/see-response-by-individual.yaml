@@ -1,0 +1,24 @@
+appId: com.sindika.workfusion
+---
+
+# - runFlow: "../auth/supervisor-login-success.yaml"
+
+- launchApp:
+    clearState: false
+
+- assertVisible: "Hi, Nailus ☀️\nWelcome to Work Fusion!"
+
+- tapOn: "Monitoring\nTab 3 of 4"
+
+- assertVisible: "Monitoring\nPage showing employees' task assignments"
+
+- tapOn: "Urgent\n1/1 Submitted\nHuman Resource KPI\nDue 17 Jun 2026 by 20:00 WIB"
+
+# task title
+- assertVisible: "Human Resource KPI"
+
+- tapOn: "Individuals\nTab 3 of 3"
+
+- assertVisible: "Response by Individuals\nSee answers per assignee."
+
+- scroll

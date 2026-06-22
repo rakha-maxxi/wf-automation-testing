@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-10: Select Draft Task from Status Filter
+# Verify filtering by Draft Task status
+
+- launchApp:
+    clearState: true
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn:
+    index: 0
+    id: "Button"
+- tapOn: "Draft Task"
+- tapOn: "Apply"
+- assertVisible: "Draft Task"

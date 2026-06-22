@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-15: Close Status Filter via Close Button
+# Verify closing the status filter bottom sheet
+
+- launchApp:
+    clearState: true
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn:
+    index: 0
+    id: "Button"
+- assertVisible: "Status Filter"
+- tapOn: "Close"
+- assertVisible: "On Going"

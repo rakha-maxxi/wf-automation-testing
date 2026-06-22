@@ -1,0 +1,17 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-21: Open Due Date Filter Bottom Sheet
+# Verify tapping Due Date filter opens the due date filter bottom sheet
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Due Date"
+- assertVisible: "Due Date Filter"
+- assertVisible: "All Time"
+- assertVisible: "Today"
+- assertVisible: "This Week"
+- assertVisible: "This Month"
+- assertVisible: "Custom Range"

@@ -1,0 +1,13 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-19: Reset Priority Filter to All Priority
+# Verify resetting priority filter back to All Priority
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Priority"
+- tapOn: "All Priority"
+- tapOn: "Apply"

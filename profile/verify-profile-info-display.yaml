@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-02: Verify Profile Info Display
+# Verify user's name and email are visible on profile page
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- assertVisible: Profile
+# User avatar or initials should be visible

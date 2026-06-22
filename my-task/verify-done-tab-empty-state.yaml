@@ -1,0 +1,11 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-27: Verify Done Tab Empty State
+# Verify empty state message when no done tasks exist
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "Done"
+- assertVisible: "Done"

@@ -1,0 +1,12 @@
+appId: com.sindika.workfusion
+---
+# TC-NOTIF-02: Verify Notification Tab Bar
+# Verify View All and Unread tabs are visible
+
+- launchApp:
+    clearState: false
+
+- tapOn: "Notifications"
+
+- assertVisible: View All
+- assertVisible: Unread

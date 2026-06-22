@@ -1,0 +1,18 @@
+appId: com.sindika.workfusion
+---
+- launchApp:
+    clearState: false
+
+- tapOn: Filter
+
+- tapOn: Select date range
+
+- tapOn: 11, Saturday, April 11, 2026, Today
+
+- tapOn: 22, Wednesday, April 22, 2026
+
+- tapOn: Save
+
+- tapOn: Apply Filter
+
+- assertVisible: Showing range (11 Apr 2026 - 22 Apr 2026)

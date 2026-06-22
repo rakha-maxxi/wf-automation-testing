@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-13: Select Need Approval from Status Filter
+# Verify filtering by Need Approval status
+
+- launchApp:
+    clearState: true
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn:
+    index: 0
+    id: "Button"
+- tapOn: "Need Approval"
+- tapOn: "Apply"
+- assertVisible: "Need Approval"

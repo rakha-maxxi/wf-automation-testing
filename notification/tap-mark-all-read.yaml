@@ -1,0 +1,15 @@
+appId: com.sindika.workfusion
+---
+# TC-NOTIF-06: Tap Mark All Read
+# Verify tapping Mark All Read marks all notifications as read
+
+- launchApp:
+    clearState: false
+
+- tapOn: "Notifications"
+
+- tapOn: "Mark all read"
+
+# After marking all read, switching to Unread tab should show empty state
+- tapOn: Unread
+- assertVisible: "All caught up!"

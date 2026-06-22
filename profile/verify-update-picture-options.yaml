@@ -1,0 +1,20 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-12: Update Picture Bottom Sheet Options
+# Verify tapping Update Picture shows camera and gallery options
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- tapOn:
+    id: "btn-edit-profile"
+
+- assertVisible: Update Profile
+- tapOn: Update Picture
+
+- assertVisible: Open Camera
+- assertVisible: Open Gallery

@@ -1,0 +1,17 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-05: Verify Done Tab Task List
+# Verify completed tasks are displayed in the Done tab
+
+- launchApp:
+    clearState: true
+
+- tapOn: "My Task"
+- tapOn: "Done"
+- assertVisible: "Data Protection Compliance Review"
+- assertVisible: "Compliance Check-Up"
+- assertVisible: "Internal Audit Preparation"
+- assertVisible: "Policy Update Review"
+- assertVisible: "Annual Compliance Training"
+- assertVisible: "Compliance Risk Assessment"
+- assertVisible: "Audit Findings Follow-Up"

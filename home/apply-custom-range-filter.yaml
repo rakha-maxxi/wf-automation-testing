@@ -1,0 +1,29 @@
+appId: com.sindika.workfusion
+---
+- runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-09: Apply Custom Range Filter
+# Verify selecting a custom date range updates the overview display
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- assertVisible: "Filter"
+- tapOn: Filter
+
+
+- assertVisible: Overview Filter
+- tapOn: Custom Range
+- tapOn:
+    point: "50%,85%"
+
+- tapOn: 20, Saturday, June 20, 2026, Today
+- tapOn: 22, Monday, June 22, 2026
+- tapOn: Save
+
+- tapOn: Apply Filter
+
+- assertVisible: ".*Showing range.*"

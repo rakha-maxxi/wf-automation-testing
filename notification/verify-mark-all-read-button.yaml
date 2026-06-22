@@ -1,0 +1,11 @@
+appId: com.sindika.workfusion
+---
+# TC-NOTIF-05: Verify Mark All Read Button
+# Verify the Mark All Read button is visible when there are unread notifications
+
+- launchApp:
+    clearState: false
+
+- tapOn: "Notifications"
+
+- assertVisible: "Mark all read"

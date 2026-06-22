@@ -1,0 +1,11 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-01: Verify My Task Page Header
+# Verify the My Task page displays correct header and subtitle
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- assertVisible: "My Task"
+- assertVisible: "List of all tasks assigned to me"

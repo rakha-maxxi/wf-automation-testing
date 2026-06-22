@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-18: Select Low Task from Priority Filter
+# Verify filtering by Low priority
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Priority"
+- tapOn: "Low Task"
+- tapOn: "Apply"
+- assertVisible: "Low Task"

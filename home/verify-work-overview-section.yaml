@@ -1,0 +1,18 @@
+appId: com.sindika.workfusion
+---
+- runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-02: Verify Work Overview Section
+# Verify the Work Overview section is visible with status cards
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- assertVisible: Work Overview
+- assertVisible: Pending
+- assertVisible: Overdue
+- assertVisible: Need Approval
+- assertVisible: Draft

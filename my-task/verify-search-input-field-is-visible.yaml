@@ -1,0 +1,11 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-06: Verify Search Input Field is Visible
+# Verify search input field renders on My Task page
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- assertVisible: "Search..."

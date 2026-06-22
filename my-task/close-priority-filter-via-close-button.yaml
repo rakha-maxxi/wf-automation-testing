@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-20: Close Priority Filter via Close Button
+# Verify closing the priority filter bottom sheet
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Priority"
+- assertVisible: "Priority Filter"
+- tapOn: "Close"
+- assertVisible: "On Going"

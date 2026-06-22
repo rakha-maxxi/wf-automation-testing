@@ -1,0 +1,23 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-10: Cancel Overview Filter
+# Verify canceling the filter bottom sheet keeps the original state
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- assertVisible: ".*Showing today.*"
+
+- tapOn: Filter
+- assertVisible: Overview Filter
+- tapOn:
+    point: "50%,39%"
+- tapOn: Cancel
+
+# After canceling, should still show the original filter
+- assertVisible: Showing today

@@ -1,0 +1,18 @@
+appId: com.sindika.workfusion
+---
+# TC-AUTH-07: Verify Login Page UI Elements
+# Verify all essential elements are visible on the login page
+
+- launchApp:
+    clearState: true
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- assertVisible: Hi, welcome to Work Fusion
+- assertVisible: "Sign in or create your account easily."
+- assertVisible: Continue to Work Fusion

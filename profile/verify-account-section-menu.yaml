@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-03: Verify Account Section Menu Items
+# Verify all Account section menu items are visible
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- assertVisible: Account
+- assertVisible: Change Password
+- assertVisible: Change Language
+- assertVisible: Manage Account

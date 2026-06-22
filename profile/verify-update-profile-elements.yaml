@@ -1,0 +1,21 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-06: Verify Update Profile Page Elements
+# Verify all elements on the update profile page
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- tapOn:
+    id: "btn-edit-profile"
+
+- assertVisible: Update Profile
+- assertVisible: Update Picture
+- assertVisible: "Please make sure your file is in JPG or PNG format, and the size does not exceed 15MB."
+- assertVisible: Name
+- assertVisible: Email
+- assertVisible: Save Changes

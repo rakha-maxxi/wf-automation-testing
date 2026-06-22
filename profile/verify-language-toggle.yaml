@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-13: Verify Language Toggle on Profile Page
+# Verify the language toggle is visible and shows EN
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- assertVisible: Change Language
+- assertVisible: EN
+
+

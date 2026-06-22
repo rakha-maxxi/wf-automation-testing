@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-12: Select Overdue Task from Status Filter
+# Verify filtering by Overdue Task status
+
+- launchApp:
+    clearState: true
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn:
+    index: 0
+    id: "Button"
+- tapOn: "Overdue Task"
+- tapOn: "Apply"
+- assertVisible: "Overdue Task"

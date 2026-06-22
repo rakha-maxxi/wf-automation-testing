@@ -1,0 +1,47 @@
+appId: com.sindika.workfusion
+---
+# TC-AUTH-01: Worker Login - Happy Flow
+# Verify worker can login with valid credentials and see welcome dashboard
+
+- launchApp:
+    clearState: true
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- extendedWaitUntil:
+    visible: Hi, welcome to Work Fusion
+    timeout: 10000
+- assertVisible: Continue to Work Fusion
+- tapOn: Continue to Work Fusion
+- extendedWaitUntil:
+    visible: "Enter your credentials to access your account"
+    timeout: 15000
+
+
+- tapOn:
+    id: "username"
+- inputText: r
+- inputText: akha
+
+- tapOn:
+    id: "password"
+- inputText: Rakha123!
+- pressKey: Enter
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- extendedWaitUntil:
+    visible: |-
+      Hi, Rakha ☀️
+      Welcome to Work Fusion!
+    timeout: 15000

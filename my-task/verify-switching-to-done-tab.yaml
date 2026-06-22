@@ -1,0 +1,11 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-04: Switch to Done Tab
+# Verify switching from On Going to Done tab
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "Done"
+- assertVisible: "Done"

@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-16: Open Priority Filter Bottom Sheet
+# Verify tapping Priority filter opens the priority filter bottom sheet
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Priority"
+- assertVisible: "Priority Filter"
+- assertVisible: "All Priority"
+- assertVisible: "Urgent Task"
+- assertVisible: "Normal Task"
+- assertVisible: "Low Task"

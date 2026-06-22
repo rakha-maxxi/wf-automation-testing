@@ -1,0 +1,50 @@
+appId: com.sindika.workfusion
+---
+# TC-AUTH-06: Worker Logout
+# Verify worker can logout from dashboard and return to guest screen
+
+- launchApp:
+    clearState: true
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- tapOn: Continue to Work Fusion
+
+- tapOn:
+    id: "username"
+- inputText: r
+- inputText: akha
+- pressKey: Back
+
+- tapOn:
+    id: "password"
+- inputText: Rakha123!
+- pressKey: Back
+
+- tapOn:
+    text: Sign in
+    index: 1
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- assertVisible: |-
+    Hi, Rakha ☀️
+    Welcome to Work Fusion!
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- tapOn: Log Out
+
+- assertVisible: Hi, welcome to Work Fusion

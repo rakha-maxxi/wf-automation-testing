@@ -1,0 +1,21 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-06: Apply Today Filter (Default)
+# Verify selecting Today filter shows today's data
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- tapOn: Filter
+
+- assertVisible: Overview Filter
+- tapOn:
+    point: "50%,50%"
+- tapOn: Apply Filter
+
+- assertVisible: ".*Showing today.*"

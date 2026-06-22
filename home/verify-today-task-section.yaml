@@ -1,0 +1,15 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-03: Verify Today's Task Section
+# Verify the Today's Task section is visible on the home page
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- assertVisible: "Today's Task"
+- assertVisible: "View my task"

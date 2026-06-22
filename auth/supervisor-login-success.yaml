@@ -1,0 +1,43 @@
+appId: com.sindika.workfusion
+---
+# TC-AUTH-02: Supervisor Login - Happy Flow
+# Verify supervisor can login with valid credentials and see welcome dashboard
+
+- launchApp:
+    clearState: true
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- assertVisible: Hi, welcome to Work Fusion
+- tapOn: Continue to Work Fusion
+
+- tapOn:
+    id: "username"
+- inputText: n
+- inputText: ailussaada
+- pressKey: Back
+
+- tapOn:
+    id: "password"
+- inputText: Nailus123!
+- pressKey: Back
+
+- tapOn:
+    text: Sign in
+    index: 1
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- assertVisible: |-
+    Hi, Nailus ☀️
+    Welcome to Work Fusion!

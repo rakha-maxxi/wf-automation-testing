@@ -1,0 +1,20 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-04: Open Overview Filter Bottom Sheet
+# Verify tapping Filter opens the overview filter bottom sheet
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- tapOn: Filter
+
+- assertVisible: "Overview Filter"
+
+- assertVisible: "Cancel"
+
+- assertVisible: "Apply Filter"

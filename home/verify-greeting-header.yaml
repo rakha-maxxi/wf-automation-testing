@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-01: Verify Home Page Header & Greeting
+# Verify the greeting message and welcome text are displayed after login
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- assertVisible: |-
+    Hi, Rakha ☀️
+    Welcome to Work Fusion!

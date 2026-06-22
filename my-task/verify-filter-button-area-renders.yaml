@@ -1,0 +1,13 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-08: Verify Filter Button Area Renders
+# Verify filter buttons (Status, Priority, Due Date) are visible
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- assertVisible: "Status"
+- assertVisible: "Priority"
+- assertVisible: "Due Date"

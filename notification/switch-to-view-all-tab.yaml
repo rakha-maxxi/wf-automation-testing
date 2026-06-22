@@ -1,0 +1,13 @@
+appId: com.sindika.workfusion
+---
+# TC-NOTIF-04: Switch Back to View All Tab
+# Verify switching back to View All tab from Unread
+
+- launchApp:
+    clearState: false
+
+- tapOn: "Notifications"
+
+- tapOn: Unread
+- tapOn: View All
+- assertVisible: View All

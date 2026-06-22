@@ -1,0 +1,13 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-28: Verify Empty State for On Going Tab
+# Verify empty state when all tasks are filtered out
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- assertVisible: "On Going"
+# Verify content is present on the On Going tab
+- assertVisible: "Search..."

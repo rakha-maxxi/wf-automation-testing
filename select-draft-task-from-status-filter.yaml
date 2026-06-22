@@ -1,0 +1,4 @@
+appId: com.sindika.workfusion
+---
+- launchApp:
+    clearState: true

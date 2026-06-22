@@ -1,0 +1,18 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-12: Navigate to My Task via "View my task" Link
+# Verify tapping "View my task" navigates to the My Task page
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- tapOn: "View my task"
+
+- assertVisible: "Draft Tasks"
+- assertVisible: On Going
+- assertVisible: Done

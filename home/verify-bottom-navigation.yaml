@@ -1,0 +1,18 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-11: Verify Bottom Navigation Tabs
+# Verify all bottom navigation tabs are visible
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- assertVisible: "Home\nTab 1 of 3"
+
+- assertVisible: "My Task\nTab 2 of 3"
+
+- assertVisible: "Profile\nTab 3 of 3"

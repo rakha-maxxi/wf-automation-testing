@@ -1,0 +1,19 @@
+appId: com.sindika.workfusion
+---
+
+# - runFlow: "../auth/supervisor-login-success.yaml"
+
+- launchApp:
+    clearState: false
+
+- assertVisible: "Hi, Nailus ☀️\nWelcome to Work Fusion!"
+
+- tapOn: "Monitoring\nTab 3 of 4"
+
+- assertVisible: "Monitoring\nPage showing employees' task assignments"
+
+- tapOn: "Due Date"
+
+- tapOn: "Yesterday\n19 June 2026"
+
+- tapOn: "Apply Filter"

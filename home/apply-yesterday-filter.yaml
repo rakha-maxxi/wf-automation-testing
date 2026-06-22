@@ -1,0 +1,21 @@
+appId: com.sindika.workfusion
+---
+# - runFlow: ../auth/worker-login-success.yaml
+
+# TC-HOME-05: Apply Yesterday Filter
+# Verify selecting Yesterday filter updates the overview display
+
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: Work Overview
+    timeout: 10000
+
+- tapOn: Filter
+
+- assertVisible: Overview Filter
+- tapOn:
+    point: "50%,39%"
+- tapOn: Apply Filter
+
+- assertVisible: ".*Showing yesterday.*"

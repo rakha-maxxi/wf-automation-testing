@@ -1,0 +1,24 @@
+appId: com.sindika.workfusion
+---
+# TC-AUTH-08: Verify Auth WebView Opens
+# Verify that tapping Continue opens the authentication WebView
+
+- launchApp:
+    clearState: true
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- assertVisible: Continue to Work Fusion
+- tapOn: Continue to Work Fusion
+
+# After tapping, auth WebView should load with username/password fields
+- assertVisible: Username or email
+- assertVisible: Password
+- assertVisible:
+    text: Sign in
+    index: 1

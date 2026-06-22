@@ -1,0 +1,22 @@
+appId: com.sindika.workfusion
+---
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- tapOn:
+    id: "btn-edit-profile"
+
+- tapOn:
+    id: "input-name"
+
+
+
+- tapOn: "Back"
+
+- tapOn:
+    id: "btn-save-changes"
+

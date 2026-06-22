@@ -1,0 +1,22 @@
+appId: com.sindika.workfusion
+---
+- launchApp:
+    clearState: true
+
+- tapOn: Continue to Work Fusion
+
+- tapOn: Username or email name@company.com
+- inputText: nailussaada
+- tapOn: Back
+
+- tapOn: Password ••••••••
+- inputText: Nailus123!
+- tapOn: Back
+
+- tapOn:
+    text: Sign in
+    index: 1
+
+- assertVisible: |-
+    Hi, Nailus ☀️
+    Welcome to Work Fusion!

@@ -1,0 +1,25 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-07: Edit Profile Name and Save
+# Verify editing profile name and saving changes
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- tapOn:
+    id: "btn-edit-profile"
+
+- assertVisible: Update Profile
+
+# Clear and type new name
+- tapOn:
+    id: "input-name"
+- eraseText: 20
+- inputText: "Rakha Updated"
+
+- tapOn: Save Changes
+ 

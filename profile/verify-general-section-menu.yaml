@@ -1,0 +1,17 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-04: Verify General Section Menu Items
+# Verify all General section menu items are visible
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- assertVisible: General
+- assertVisible: Privacy Policy
+- assertVisible: Terms of Service
+- assertVisible: Help Center
+- assertVisible: Log Out

@@ -1,0 +1,20 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-05: Navigate to Edit Profile Page
+# Verify tapping edit button navigates to update profile page
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- tapOn:
+    id: "btn-edit-profile"
+
+- assertVisible: Update Profile
+- assertVisible: Update Picture
+- assertVisible: Name
+- assertVisible: Email
+- assertVisible: Save Changes

@@ -1,0 +1,12 @@
+appId: com.sindika.workfusion
+---
+# TC-NOTIF-01: Verify Notification Page Header
+# Verify the Notification page displays correct title
+
+- launchApp:
+    clearState: false
+
+# Navigate to notification page via app bar notification icon
+- tapOn: "Notifications"
+
+- assertVisible: Notifications

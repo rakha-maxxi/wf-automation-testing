@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-23: Select This Week from Due Date Filter
+# Verify filtering tasks by This Week due date
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Due Date"
+- tapOn: "This Week"
+- tapOn: "Apply"
+- assertVisible: "This Week"

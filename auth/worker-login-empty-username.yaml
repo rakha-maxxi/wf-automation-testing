@@ -1,0 +1,28 @@
+appId: com.sindika.workfusion
+---
+# TC-AUTH-03: Worker Login - Empty Username
+# Verify sign in button behavior when username field is empty
+
+- launchApp:
+    clearState: true
+
+- tapOn:
+    text: Cancel
+    optional: true
+- tapOn:
+    text: Not now
+    optional: true
+
+- tapOn: Continue to Work Fusion
+
+- tapOn:
+    id: "password"
+- inputText: Rakha123!
+- pressKey: Back
+
+- tapOn:
+    text: Sign in
+    index: 1
+
+# Should remain on login page, not navigate to dashboard
+- assertVisible: Username or email

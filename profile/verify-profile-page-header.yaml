@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-PROFILE-01: Verify Profile Page Header
+# Verify the Profile page displays correct title and subtitle
+
+- launchApp:
+    clearState: false
+
+- tapOn: |-
+    Profile
+    Tab 3 of 3
+
+- assertVisible: Profile
+- assertVisible: "Setting your profile details"

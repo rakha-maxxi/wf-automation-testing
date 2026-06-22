@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-26: Close Due Date Filter via Close Button
+# Verify closing the due date filter bottom sheet
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Due Date"
+- assertVisible: "Due Date Filter"
+- tapOn: "Close"
+- assertVisible: "On Going"

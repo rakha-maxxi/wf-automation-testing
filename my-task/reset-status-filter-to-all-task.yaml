@@ -1,0 +1,16 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-14: Reset Status Filter to All Task
+# Verify resetting status filter back to All Task
+
+- launchApp:
+    clearState: true
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn:
+    index: 0
+    id: "Button"
+- tapOn: "All Task"
+- tapOn: "Apply"
+- assertVisible: "All Task"

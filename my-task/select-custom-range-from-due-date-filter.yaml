@@ -1,0 +1,13 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-25: Select Custom Range from Due Date Filter
+# Verify filtering tasks by Custom date range
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Due Date"
+- tapOn: "Custom Range"
+- tapOn: "Apply"

@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-22: Select Today from Due Date Filter
+# Verify filtering tasks by Today due date
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Due Date"
+- tapOn: "Today"
+- tapOn: "Apply"
+- assertVisible: "Today"

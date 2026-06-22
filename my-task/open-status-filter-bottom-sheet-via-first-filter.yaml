@@ -1,0 +1,19 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-09: Open Status Filter Bottom Sheet
+# Verify tapping Status filter opens the status filter bottom sheet
+
+- launchApp:
+    clearState: true
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn:
+    index: 0
+    id: "Button"
+- assertVisible: "Status Filter"
+- assertVisible: "All Task"
+- assertVisible: "Pending Task"
+- assertVisible: "Overdue Task"
+- assertVisible: "Need Approval"
+- assertVisible: "Draft Task"

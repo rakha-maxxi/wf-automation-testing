@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-24: Select This Month from Due Date Filter
+# Verify filtering tasks by This Month due date
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Due Date"
+- tapOn: "This Month"
+- tapOn: "Apply"
+- assertVisible: "This Month"

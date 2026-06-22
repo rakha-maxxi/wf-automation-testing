@@ -1,0 +1,13 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-02: Verify Default Tab is On Going
+# Verify the On Going tab is selected by default
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- assertVisible: "On Going"
+- assertVisible: "Done"
+# On Going should be the active/selected tab
+- assertVisible: "On Going"

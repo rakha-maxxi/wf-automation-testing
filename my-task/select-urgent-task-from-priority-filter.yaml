@@ -1,0 +1,14 @@
+appId: com.sindika.workfusion
+---
+# TC-TASK-17: Select Urgent Task from Priority Filter
+# Verify filtering by Urgent priority
+
+- launchApp:
+    clearState: false
+
+- tapOn: "My Task"
+- tapOn: "On Going"
+- tapOn: "Priority"
+- tapOn: "Urgent Task"
+- tapOn: "Apply"
+- assertVisible: "Urgent Task"
